@@ -1,0 +1,81 @@
+{
+  "extends": [
+    "tslint-eslint-rules",
+    "tslint-react",
+    "tslint-config-prettier",
+    "react-set-state-usage"
+  ],
+  "rules": {
+    "array-type": [true, "generic"],
+    "arrow-return-shorthand": [true],
+    "await-promise": false,
+    "class-name": true,
+    "comment-format": [true, "check-space"],
+    "curly": true,
+    "cyclomatic-complexity": [true, 20],
+    "eofline": true,
+    "indent": [true, "spaces", 2],
+    "interface-over-type-literal": true,
+    "match-default-export-name": false,
+    "new-parens": true,
+    "no-consecutive-blank-lines": [true, 2],
+    "no-console": [true, "log", "error"],
+    "no-construct": true,
+    "no-debugger": true,
+    "no-duplicate-super": true,
+    "no-eval": true,
+    "no-internal-module": true,
+    "no-misused-new": true,
+    "no-reference": true,
+    "no-shadowed-variable": true,
+    "no-switch-case-fall-through": true,
+    "no-trailing-whitespace": true,
+    "no-unused-variable": [
+      false,
+      {
+        "ignore-pattern": "^(_|React)|(.*Mutation|.*MutationVariables|.*Query|.*Subscription)$"
+      }
+    ],
+    "no-unsafe-finally": true,
+    "no-var-keyword": true,
+    "one-line": [true, "check-open-brace", "check-whitespace"],
+    "one-variable-per-declaration": [true],
+    "prefer-const": true,
+    "quotemark": [false],
+    "radix": true,
+    "semicolon": [true, "never"],
+    "trailing-comma": [false],
+    "triple-equals": [true, "allow-null-check"],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "variable-name": [true, "ban-keywords"],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ],
+    "interface-name": [true, "never-prefix"],
+    "no-angle-bracket-type-assertion": true,
+    "no-boolean-literal-compare": true,
+    "block-spacing": "never",
+    "brace-style": [true, "1tbs"],
+    "no-duplicate-case": true,
+    "ter-no-irregular-whitespace": true,
+    "no-multi-spaces": true,
+    "ter-arrow-spacing": [true, {"before": true, "after": true}],
+    "valid-typeof": true,
+    "jsx-key": [false],
+    "react-set-state-usage": true
+  }
+}

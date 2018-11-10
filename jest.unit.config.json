@@ -1,0 +1,34 @@
+{
+  "displayName": "@casalova/web-client - unit",
+  "setupFiles": [
+    "raf/polyfill",
+    "jest-date-mock",
+    "core-js/modules/es7.symbol.async-iterator",
+    "core-js/modules/es7.symbol.observable"
+  ],
+  "setupTestFrameworkScriptFile": "./src/__tests__/utils/unitTestSetup.ts",
+  "transform": {
+    "\\.(gql|graphql)$": "jest-transform-graphql",
+    "\\.(ts|tsx)$": "ts-jest",
+    ".*": "<rootDir>/babel-jest.js"
+  },
+  "watchPathIgnorePatterns": ["/lib/*", "/node_modules/*"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html|yml|ico)$": "<rootDir>/src/__mocks__/fileMock.js",
+    "^code/(.*)": "<rootDir>/src/code/$1",
+    "^__tests__/(.*)": "<rootDir>/src/__tests__/$1"
+  },
+  "testRegex": "ts-starter-kit/src/?.*/__tests__/.*\\.unit\\.spec\\.(ts|tsx|js|jsx)$",
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+  "globals": {
+    "__DEV__": true,
+    "__SERVER__": false,
+    "__PROD__": false,
+    "__HMR__": false,
+    "ts-jest": {
+      "tsConfigFile": "./tsconfig.test.json"
+    }
+  },
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "testURL": "http://localhost"
+}

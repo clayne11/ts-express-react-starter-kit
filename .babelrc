@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "targets": {
+          "node": true
+        }
+      }
+    ],
+    "@babel/preset-react",
+    "./webpack/clayne-babel-preset"
+  ]
+}
