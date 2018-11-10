@@ -1,0 +1,24 @@
+input CreateFooInput {
+  title: String!
+}
+
+type Foo {
+  nodeId: ID!
+  _id: ID!
+  title: String!
+}
+
+type Mutation {
+  version: Int
+  createFoo(input: CreateFooInput!): Foo!
+}
+
+type Query {
+  version: Int
+  findTest(title: String!): Foo
+}
+
+type Subscription {
+  version: Int
+  onFooChange: Foo
+}
