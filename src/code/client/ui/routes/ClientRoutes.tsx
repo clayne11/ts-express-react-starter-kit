@@ -1,3 +1,4 @@
+import {NotFound} from 'code/client/ui/components/NotFound'
 import {OtherPage} from 'code/client/ui/components/OtherPage'
 import {RootPage} from 'code/client/ui/components/RootPage'
 import {GlobalStyles} from 'code/client/ui/styles/GlobalStyles'
@@ -29,6 +30,11 @@ export const ClientRoutes = React.memo(() => (
         {...{
           path: '/foo/:title',
           render: props => <OtherPage {...props} />,
+        }}
+      />
+      <Route
+        {...{
+          render: props => <NotFound {...props} />,
         }}
       />
     </Switch>
