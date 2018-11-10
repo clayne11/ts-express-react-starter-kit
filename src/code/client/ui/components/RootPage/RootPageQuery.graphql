@@ -1,4 +1,4 @@
-query RootPage($title: String!) {
+query RootPageQuery($title: String!) {
   foo: findFoo(title: $title) {
     nodeId
     _id
