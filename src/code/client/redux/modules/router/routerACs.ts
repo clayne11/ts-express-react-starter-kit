@@ -1,5 +1,5 @@
-import {push as reduxPush} from 'react-router-redux'
-import {replace as reduxReplace} from 'react-router-redux'
+import {push as reduxPush} from 'connected-react-router'
+import {replace as reduxReplace} from 'connected-react-router'
 import {stringify} from 'qs'
 
 export const push = locationOrString => {

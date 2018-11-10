@@ -1,5 +1,5 @@
 import {ApolloClient} from 'apollo-client'
-import {routerMiddleware} from 'react-router-redux'
+import {routerMiddleware} from 'connected-react-router'
 import {applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 import {BrowserStorage} from '../utils/browserStorage'
@@ -58,7 +58,7 @@ export default ({
   setOptions(sagaOptions)
 
   const store = createInjectSagasStore(
-    createRootReducer(),
+    createRootReducer({history}),
     initialState,
     enhancer
   )
@@ -66,7 +66,7 @@ export default ({
 
   if (__HMR__ && module.hot) {
     module.hot.accept('./createRootReducer', () => {
-      store.replaceReducer(createRootReducer())
+      store.replaceReducer(createRootReducer({history}))
     })
 
     module.hot.accept('./rootSaga', () => {

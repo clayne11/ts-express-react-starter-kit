@@ -1,7 +1,8 @@
-import {routerReducer} from 'react-router-redux'
+import {connectRouter} from 'connected-react-router'
+import {History} from 'history'
 import {reducer as formReducer} from 'redux-form'
 
-export default () => ({
+export default ({history}: {history: History}) => ({
   form: formReducer,
-  router: routerReducer,
+  router: connectRouter(history),
 })
