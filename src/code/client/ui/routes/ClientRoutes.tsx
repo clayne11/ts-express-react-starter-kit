@@ -7,7 +7,7 @@ import React from 'react'
 import {Route, Switch} from 'react-router'
 import {SimpleLayout} from './SimpleLayout'
 
-export const ClientRoutes = React.memo(() => (
+export const ClientRoutes = () => (
   <SimpleLayout>
     <ThemeConsumer>
       {theme => (
@@ -39,4 +39,4 @@ export const ClientRoutes = React.memo(() => (
       />
     </Switch>
   </SimpleLayout>
-))
+)
