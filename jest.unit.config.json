@@ -6,7 +6,7 @@
     "core-js/modules/es7.symbol.async-iterator",
     "core-js/modules/es7.symbol.observable"
   ],
-  "setupTestFrameworkScriptFile": "./src/__tests__/utils/unitTestSetup.ts",
+  "setupTestFrameworkScriptFile": "./src/__tests__/unitTestSetup.ts",
   "transform": {
     "\\.(gql|graphql)$": "jest-transform-graphql",
     "\\.(ts|tsx)$": "ts-jest",
