@@ -119,6 +119,7 @@
     "apollo-utilities": "^1.0.25",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
+    "dataloader": "^1.4.0",
     "es6-error": "^4.1.1",
     "express": "^4.16.4",
     "graphql": "^14.0.2",

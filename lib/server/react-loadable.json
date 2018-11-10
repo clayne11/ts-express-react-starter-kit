@@ -85,15 +85,13 @@
       "publicPath": "/static/main.js"
     }
   ],
-  "code/universal/utils/base64": [
+  "./base64": [
     {
       "id": "./src/code/universal/utils/base64/index.ts",
       "name": "./src/code/universal/utils/base64/index.ts",
       "file": "main.js",
       "publicPath": "/static/main.js"
-    }
-  ],
-  "./base64": [
+    },
     {
       "id": "./src/code/universal/utils/base64/base64.ts",
       "name": "./src/code/universal/utils/base64/base64.ts",
@@ -453,6 +451,12 @@
     {
       "id": "./node_modules/qs/lib/utils.js",
       "name": "./node_modules/qs/lib/utils.js",
+      "file": "vendors~main.js",
+      "publicPath": "/static/vendors~main.js"
+    },
+    {
+      "id": "./node_modules/redux-saga/es/internal/utils.js",
+      "name": "./node_modules/redux-saga/es/internal/utils.js",
       "file": "vendors~main.js",
       "publicPath": "/static/vendors~main.js"
     },
@@ -4315,7 +4319,7 @@
       "publicPath": "/static/vendors~main.js"
     }
   ],
-  "prop-types/checkPropTypes": [
+  "./checkPropTypes": [
     {
       "id": "./node_modules/prop-types/checkPropTypes.js",
       "name": "./node_modules/prop-types/checkPropTypes.js",
@@ -5543,7 +5547,7 @@
       "publicPath": "/static/vendors~main.js"
     }
   ],
-  "./internal/buffers": [
+  "../buffers": [
     {
       "id": "./node_modules/redux-saga/es/internal/buffers.js",
       "name": "./node_modules/redux-saga/es/internal/buffers.js",
@@ -5551,7 +5555,7 @@
       "publicPath": "/static/vendors~main.js"
     }
   ],
-  "./internal/channel": [
+  "../channel": [
     {
       "id": "./node_modules/redux-saga/es/internal/channel.js",
       "name": "./node_modules/redux-saga/es/internal/channel.js",
@@ -5607,7 +5611,7 @@
       "publicPath": "/static/vendors~main.js"
     }
   ],
-  "./internal/sagaHelpers": [
+  "./sagaHelpers": [
     {
       "id": "./node_modules/redux-saga/es/internal/sagaHelpers/index.js",
       "name": "./node_modules/redux-saga/es/internal/sagaHelpers/index.js",
@@ -5643,14 +5647,6 @@
     {
       "id": "./node_modules/redux-saga/es/internal/scheduler.js",
       "name": "./node_modules/redux-saga/es/internal/scheduler.js",
-      "file": "vendors~main.js",
-      "publicPath": "/static/vendors~main.js"
-    }
-  ],
-  "./internal/utils": [
-    {
-      "id": "./node_modules/redux-saga/es/internal/utils.js",
-      "name": "./node_modules/redux-saga/es/internal/utils.js",
       "file": "vendors~main.js",
       "publicPath": "/static/vendors~main.js"
     }
@@ -5903,7 +5899,7 @@
       "publicPath": "/static/vendors~main.js"
     }
   ],
-  "webpack/hot/emitter": [
+  "./emitter": [
     {
       "id": "./node_modules/webpack/hot/emitter.js",
       "name": "./node_modules/webpack/hot/emitter.js",
