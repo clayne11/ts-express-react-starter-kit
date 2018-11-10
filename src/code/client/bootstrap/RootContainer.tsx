@@ -1,12 +1,12 @@
 import {ApolloClient} from 'apollo-client'
+import {ThemeProvider} from 'code/client/ui/styles/styled-components'
+import {styleTheme} from 'code/client/ui/styles/styleTheme'
 import React from 'react'
 import {ApolloProvider} from 'react-apollo'
 import {Provider as ReactReduxProvider} from 'react-redux'
 import {ConnectedRouter} from 'react-router-redux'
 import {toClass} from 'recompose'
 import {Store} from 'redux'
-import {ThemeProvider} from 'code/client/ui/styles/styled-components'
-import {styleTheme} from 'code/client/ui/styles/styleTheme'
 
 interface RootContainerProps {
   apolloClient: ApolloClient<any>
