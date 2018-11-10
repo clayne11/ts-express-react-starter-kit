@@ -1,5 +1,12 @@
+import {TestModel} from '../model/testSchema'
+
 export default {
   Query: {
-    getTest: () => ({}),
+    findTest: async (_, {title}) => {
+      const test = await TestModel.findOne({
+        title,
+      })
+      return test
+    },
   },
 }

@@ -3,7 +3,11 @@ import Test from './types/Test.graphql'
 
 const Mutation = gql`
   extend type Mutation {
-    changeFoo: Test!
+    createTest(input: CreateTestInput!): Test!
+  }
+
+  input CreateTestInput {
+    title: String!
   }
 `
 

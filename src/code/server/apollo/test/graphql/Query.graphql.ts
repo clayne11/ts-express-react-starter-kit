@@ -3,7 +3,7 @@ import Test from './types/Test.graphql'
 
 const Query = gql`
   extend type Query {
-    getTest: Test!
+    findTest(title: String!): Test
   }
 `
 

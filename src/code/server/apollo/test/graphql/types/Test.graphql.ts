@@ -2,7 +2,9 @@ import gql from 'graphql-tag'
 
 const Test = gql`
   type Test {
-    star: Int
+    nodeId: ID!
+    _id: ID!
+    title: String!
   }
 `
 
