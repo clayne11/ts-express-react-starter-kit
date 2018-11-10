@@ -1,5 +1,5 @@
 {
-  "displayName": "@casalova/web-client - unit",
+  "displayName": "ts-express-react-starter-kit - unit",
   "setupFiles": [
     "raf/polyfill",
     "jest-date-mock",
@@ -18,17 +18,19 @@
     "^code/(.*)": "<rootDir>/src/code/$1",
     "^__tests__/(.*)": "<rootDir>/src/__tests__/$1"
   },
-  "testRegex": "ts-starter-kit/src/?.*/__tests__/.*\\.unit\\.spec\\.(ts|tsx|js|jsx)$",
-  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+  "testRegex": "src/?.*/__tests__/.*\\.unit\\.spec\\.(ts|tsx|js|jsx)$",
+  "moduleFileExtensions": ["js", "json", "jsx", "ts", "tsx"],
   "globals": {
     "__DEV__": true,
     "__SERVER__": false,
     "__PROD__": false,
     "__HMR__": false,
     "ts-jest": {
-      "tsConfigFile": "./tsconfig.test.json"
+      "tsConfig": "./tsconfig.test.json"
     }
   },
   "snapshotSerializers": ["enzyme-to-json/serializer"],
-  "testURL": "http://localhost"
+  "testURL": "http://localhost",
+  "preset": "ts-jest/presets/js-with-babel",
+  "testMatch": null
 }

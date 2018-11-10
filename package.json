@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "generate-schema": "apollo-codegen download-schema http://localhost:3000/graphql --output ./src/code/universal/graphql-schema.json",
-    "generate-types": "apollo-codegen generate ./src/**/*.graphql --schema ./src/code/universal/graphql-schema.json --target typescript --output ./src/code/universal/graphql-types.ts --addTypename",
+    "generate-schema": "cross-env NODE_PATH=$NODE_PATH:src ts-node ./src/code/server/apollo/utils/store-graphql-sdl.ts",
+    "generate-types": "apollo-codegen generate ./src/code/client/**/*.graphql --schema ./src/code/universal/graphql-schema.json --target typescript --output ./src/code/universal/graphql-types.ts --addTypename",
+    "generate-schema-and-types": "yarn generate-schema && yarn generate-types",
     "lint:ts": "tslint -p tsconfig.json -c ./tslint.json './src/**/*.{ts,tsx}'",
     "lint:es": "yarn build:test && eslint --ext .js ./test-build-interim",
     "lint:graphql": "eslint -c .eslintrc.graphql.js --ext .graphql --ext .gql ./src",
