@@ -1,4 +1,4 @@
-import {testModule} from './test/testModule'
+import {fooModule} from './foo/fooModule'
 import {mergeModules} from './utils/mergeModules'
 
-export const modules = mergeModules([testModule])
+export const modules = mergeModules([fooModule])

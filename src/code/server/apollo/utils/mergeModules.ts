@@ -53,7 +53,7 @@ const typeDefsToGql = (typeDefs: TypeDef = []) => {
   }
 
   if (typeof typeDefs === 'function') {
-    return typeDefsToGql(typeDefs())
+    return typeDefsToGql((typeDefs as any)())
   }
 
   if (typeof typeDefs === 'string') {

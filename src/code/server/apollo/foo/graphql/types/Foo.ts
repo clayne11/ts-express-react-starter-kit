@@ -1,10 +1,10 @@
 import {globalIdUtils} from 'code/universal/utils/globalIdUtils'
 
 export default {
-  Test: {
+  Foo: {
     nodeId: test =>
       globalIdUtils.createGlobalId({
-        typename: 'Test',
+        typename: 'Foo',
         id: test._id,
       }),
 
