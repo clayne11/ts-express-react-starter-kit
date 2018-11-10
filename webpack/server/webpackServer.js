@@ -134,7 +134,11 @@ compiler.watch(
       console.log('Error', err)
       return
     }
-    await killProcess(slave)
+    try {
+      await killProcess(slave)
+    } catch (error) {
+      console.log('Error killing process', err)
+    }
 
     const entryFileName = config.output.filename
     const directoryPath = config.output.path
