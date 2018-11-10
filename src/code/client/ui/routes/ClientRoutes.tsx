@@ -1,5 +1,6 @@
+import {RootPage} from 'code/client/ui/components/RootPage'
 import React from 'react'
-import {Switch, Route} from 'react-router'
+import {Route, Switch} from 'react-router'
 import {SimpleLayout} from './SimpleLayout'
 
 export const ClientRoutes = React.memo(() => (
@@ -9,7 +10,7 @@ export const ClientRoutes = React.memo(() => (
         {...{
           path: '/',
           exact: true,
-          render: props => <div>Some stuff</div>,
+          render: props => <RootPage {...props} />,
         }}
       />
     </Switch>

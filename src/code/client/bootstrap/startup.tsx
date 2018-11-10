@@ -1,6 +1,6 @@
+import {ClientRoutes} from 'code/client/ui/routes'
 import createApolloClient from '../apollo/createApolloClient'
 import {createStore} from '../redux'
-import {ClientRoutes} from '../routes'
 import {browserHistory} from '../utils/browserHistory'
 import browserStorage from '../utils/browserStorage'
 import {domready} from '../utils/domready'
@@ -26,9 +26,8 @@ domready(async () => {
     ClientRoutes,
     store,
   })
-
   if (__HMR__ && module.hot) {
-    module.hot.accept('../routes', async () => {
+    module.hot.accept('code/client/ui/routes', async () => {
       await clientRender({
         apolloClient,
         appHistory: browserHistory,

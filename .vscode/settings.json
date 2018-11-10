@@ -2,5 +2,8 @@
   "editor.formatOnSave": true,
   "search.exclude": {
     "**/.cache-loader": true
-  }
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }

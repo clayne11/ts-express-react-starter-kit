@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'code/client/styles/styled-components'
+import styled from 'code/client/ui/styles/styled-components'
 
 const Root = styled.div`
   display: flex;
