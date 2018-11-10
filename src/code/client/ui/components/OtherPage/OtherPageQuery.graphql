@@ -1,0 +1,7 @@
+query OtherPageQuery($title: String!) {
+  foo: findFoo(title: $title) {
+    nodeId
+    _id
+    title
+  }
+}

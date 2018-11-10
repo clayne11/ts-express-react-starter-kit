@@ -4,6 +4,29 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
+// GraphQL query operation: OtherPageQuery
+// ====================================================
+
+export interface OtherPageQuery_foo {
+  __typename: "Foo";
+  nodeId: string;
+  _id: string;
+  title: string;
+}
+
+export interface OtherPageQuery {
+  foo: OtherPageQuery_foo | null;
+}
+
+export interface OtherPageQueryVariables {
+  title: string;
+}
+
+
+/* tslint:disable */
+// This file was automatically generated and should not be edited.
+
+// ====================================================
 // GraphQL query operation: RootPageQuery
 // ====================================================
 
