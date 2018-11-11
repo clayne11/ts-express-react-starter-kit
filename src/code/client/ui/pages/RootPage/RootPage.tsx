@@ -1,3 +1,4 @@
+import {login} from 'code/client/createAuth'
 import styled from 'code/client/ui/styles/styled-components'
 import {RootPageQuery} from 'code/universal/graphql-types'
 import React from 'react'
@@ -25,9 +26,18 @@ const RootPage: React.SFC<RootPageProps> = React.memo(() => {
           'Loading...'
         ) : (
           <Root>
-            {data && data.foo
-              ? data.foo.nodeId
-              : `Couldn't find foo with title ${title}`}
+            <div>
+              {data && data.foo
+                ? data.foo.nodeId
+                : `Couldn't find foo with title ${title}`}
+            </div>
+            <button
+              {...{
+                onClick: login,
+              }}
+            >
+              Log in
+            </button>
           </Root>
         )
       }

@@ -9,7 +9,7 @@ interface FooDocument extends Document {
   title: string
 }
 
-export const FooModel = mongoose.model<FooDocument>(
+export const Foo = mongoose.model<FooDocument>(
   prefixCollection('Foo'),
   fooSchema
 )

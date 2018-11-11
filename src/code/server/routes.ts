@@ -1,3 +1,4 @@
+import {attachAuthRoutes} from 'code/server/auth'
 import {app} from './app'
 import {startupChecker} from './utils/startupChecker'
 
@@ -9,3 +10,5 @@ app.get('/ping', async (_req, res) => {
     res.status(500).end()
   }
 })
+
+attachAuthRoutes({app})
