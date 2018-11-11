@@ -1,4 +1,5 @@
 import {DefaultOptions} from 'apollo-client/ApolloClient'
+import {getRootUrl} from 'code/server/utils/getUrl'
 import graphqlSchema from 'code/universal/graphql-schema.json'
 import {createGenericApolloClient} from './createGenericApolloClient'
 
@@ -11,7 +12,7 @@ export default ({
   initialState: {[x: string]: any}
   defaultOptions?: DefaultOptions
 }) => {
-  const uri = 'http://localhost:3000/graphql'
+  const uri = `${getRootUrl()}/graphql`
   const useSubscriptions = true
 
   return createGenericApolloClient({

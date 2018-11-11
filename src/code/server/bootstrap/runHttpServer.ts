@@ -1,3 +1,4 @@
+import {getPort} from 'code/server/utils/getPort'
 import {httpServer} from '../app'
 import {teardown} from '../utils/startup'
 
@@ -5,7 +6,7 @@ import {teardown} from '../utils/startup'
 
 const runHttpServer = () =>
   new Promise((resolve, reject) => {
-    const port = typeof PORT !== 'undefined' ? PORT : process.env.PORT
+    const port = getPort()
 
     if (!port) {
       throw new Error(

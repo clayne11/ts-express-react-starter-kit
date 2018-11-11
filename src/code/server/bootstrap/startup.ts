@@ -1,17 +1,14 @@
+import {setupExternalResources} from 'code/server/bootstrap/setupExternalResources'
+import {runStartup} from 'code/server/utils/startup'
 import {createApolloServer} from '../apollo/createApolloServer'
 import {startupSubject} from '../utils/startupSubject'
 import {runHttpServer} from './runHttpServer'
-import mongoose from 'mongoose'
 
 export const startup = async () => {
-  await mongoose.connect(
-    process.env.MONGODB_URI!,
-    {
-      useNewUrlParser: true,
-    }
-  )
+  await setupExternalResources()
   await createApolloServer()
   await runHttpServer()
+  await runStartup()
 
   require('code/server/webpack')
 

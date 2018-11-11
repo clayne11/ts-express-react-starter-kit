@@ -1,0 +1,42 @@
+{
+  "displayName": "ts-express-react-starter-kit - integration",
+  "setupFiles": [
+    "raf/polyfill",
+    "core-js/modules/es7.symbol.async-iterator",
+    "core-js/modules/es7.symbol.async-iterator"
+  ],
+  "setupTestFrameworkScriptFile": "./src/__tests__/integrationTestSetup.ts",
+  "transform": {
+    "\\.(gql|graphql)$": "jest-transform-graphql",
+    "\\.(ts|tsx)$": "ts-jest",
+    ".*": "<rootDir>/babel-jest.js"
+  },
+  "watchPathIgnorePatterns": ["/lib/*", "/node_modules/*"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|html|yml)$": "<rootDir>/src/__mocks__/fileMock.js",
+    "\\.(scss|css)$": "identity-obj-proxy",
+    "^client/(.*)": "<rootDir>/src/client/$1",
+    "^__tests__/(.*)": "<rootDir>/src/__tests__/$1",
+    "^server/(.*)": "<rootDir>/src/server/$1",
+    "^universal/(.*)": "<rootDir>/src/universal/$1"
+  },
+  "testRegex": "src/?.*/__tests__/.*\\.integ\\.spec\\.(ts|tsx|js|jsx)$",
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+  "globals": {
+    "__DEV__": true,
+    "__SERVER__": false,
+    "__PROD__": false,
+    "__HMR__": false,
+    "ts-jest": {
+      "tsConfig": "./tsconfig.test.json",
+      "diagnostics": false
+    }
+  },
+  "globalSetup": "./src/__tests__/integration-global-setup.js",
+  "globalTeardown": "./src/__tests__/integration-global-teardown.js",
+  "testEnvironment": "./src/__tests__/integration-environment.js",
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "testURL": "http://localhost",
+  "preset": "ts-jest/presets/js-with-babel",
+  "testMatch": null
+}
